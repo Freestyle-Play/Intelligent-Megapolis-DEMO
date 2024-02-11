@@ -60,7 +60,7 @@ def average(students) -> list:
 
 def writeFile(filename, data) -> None:
     """
-    записываем новую БД в файл
+    записываем данные в БД
 
     :param filename: название файла
     :param data: данные для записи
