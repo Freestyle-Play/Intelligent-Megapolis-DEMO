@@ -8,7 +8,7 @@ def readFile(filename: str) -> list:
     """
     with open(filename, "r", encoding='utf8') as file:
         reader = csv.DictReader(file, delimiter=',', quotechar='"')
-        students = list(reader)[1:]
+        students = list(reader)
     return students
 
 def replace_null(list):
@@ -46,7 +46,7 @@ def output(students):
     count = 1
     for student in students[::-1]:
         if "10" in student["class"]:
-            print(f"{count} Место: {student['Name'].split(' ')[1]} {student['Name'].split(' ')[0]}")
+            print(f"{count} Место: {student['Name'].split(' ')[1][0]}. {student['Name'].split(' ')[0]}")
             count += 1
         if count == 4: break
 

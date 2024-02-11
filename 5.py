@@ -8,7 +8,7 @@ def readFile(filename: str) -> list:
     """
     with open(filename, "r", encoding='utf8') as file:
         reader = csv.DictReader(file, delimiter=',', quotechar='"')
-        students = list(reader)[1:]
+        students = list(reader)
     return students
 
 def genHash(s: str):

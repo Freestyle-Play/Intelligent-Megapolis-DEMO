@@ -8,7 +8,7 @@ def readFile(filename: str) -> list:
     """
     with open(filename, "r", encoding='utf8') as file:
         reader = csv.DictReader(file, delimiter=',', quotechar='"')
-        students = list(reader)[1:]
+        students = list(reader)
     return students
 
 def search(students, element):
@@ -22,12 +22,12 @@ def search(students, element):
     for i in range(len(students)):
         if element == students[i]["titleProject_id"]:
             print(f"Проект № {element} делал: {students[i]['Name'].split(' ')[1]} {students[i]['Name'].split(' ')[0]} он(а) получил(а) оценку - {students[i]['score']}")
-
+            return
+    print("Ничего не найдено")
 
 
 if __name__ == "__main__":
     students = readFile("students.csv")
-    print(students)
     text = ''
     while text != "СТОП":
         text = input()
