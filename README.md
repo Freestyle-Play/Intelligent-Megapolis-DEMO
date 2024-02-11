@@ -14,7 +14,7 @@
 ## Установка и запуск
 1. Сконируйте репозиторий на компьютер с помощью команды:
 
-`git clone https://github.com/Freestyle-Play/Intelligent-Megapolis-DEMO.git`
+    `git clone https://github.com/Freestyle-Play/Intelligent-Megapolis-DEMO.git`
 
 3. запустить программу можно с помощью команды:
 
