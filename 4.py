@@ -24,7 +24,7 @@ def genPassword():
 def genLogin(student):
     """
     Генерируем логин для пользователя
-    
+
     :param student:
     :return:
     """
@@ -44,7 +44,7 @@ def writeFile(filename, data) -> None:
         keys = ["id","Name","titleProject_id","class","score", "login", "password"]
         writer = csv.DictWriter(file, fieldnames=keys, delimiter=",")
         writer.writeheader()
-        for student in students:
+        for student in data:
             student["login"] = genLogin(student)
             student['password'] = genPassword()
             writer.writerow(student)

@@ -70,7 +70,7 @@ def writeFile(filename, data) -> None:
         keys = ["id","Name","titleProject_id","class","score"]
         writer = csv.DictWriter(file, fieldnames=keys, delimiter=",")
         writer.writeheader()
-        writer.writerows(students)
+        writer.writerows(data)
 
 if __name__ == "__main__":
     students = readFile("students.csv")
