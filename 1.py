@@ -24,7 +24,7 @@ def readFile(filename: str) -> list:
 
 def vladimir(students) -> None:
     """
-    выводит строку с оценкой Владимира и его id проекта
+    Выводит строку с оценкой Владимира и его id проекта
 
     :param students:
     :return: None
@@ -35,7 +35,7 @@ def vladimir(students) -> None:
 
 def average(students) -> list:
     """
-    вычисляем среднее число по классу и заменяет ошибочное значение на среднее
+    Вычисляем среднее число по классу и заменяет ошибочное значение на среднее
 
     :param students:
     :return: list
@@ -52,7 +52,6 @@ def average(students) -> list:
                 sum[student["class"]] = int(student["score"])
 
     for i in range(0, len(students)):
-        table = []
         if students[i]["score"] == "None":
             students[i]["score"] = round(sum[students[i]["class"]]/ count[students[i]["class"]], 3)
 

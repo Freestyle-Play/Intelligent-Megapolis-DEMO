@@ -13,7 +13,7 @@ def readFile(filename: str) -> list:
 
 def genHash(s: str):
     alphabet = ''.join(chr(i) for i in range(1040, 1103 + 1)) + "ёЁ "
-    d = {letters: i for i, letters in enumerate(alphabet,1)}
+    d = {letters: i for i, letters in enumerate(alphabet,1)} # {"A": 1, ...}
     p = 67
     m = 10**9 + 9
     hash_val = 0
